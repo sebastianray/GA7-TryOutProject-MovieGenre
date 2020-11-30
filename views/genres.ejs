@@ -1,0 +1,34 @@
+<%- include('partials/header.ejs') %>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 mx-auto">
+              <div class="mt-5">
+                <h3 class="float-left">Genre List</h3>
+                <a href="/genres/add" class="btn btn=sm btn-primary float-right">Add Genres</a>
+              </div>
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% genres.forEach(genre => { %>
+                        <tr>
+                            <td><%= genre.id %></td>
+                            <td><%= genre.type %></td>
+                            <td><a href="/genres/edit/<%= genre.id %>" class="btn btn-sm btn-info">Edit</a><a href="genres/delete/<%= genre.id %>" class="btn btn-sm btn-danger">Delete</a></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+              </table>
+          </div>
+      </div>
+</div>
+
+  
+<%- include('partials/footer.ejs') %>
+   

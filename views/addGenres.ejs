@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') %>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-6 mx-auto">
+              <h3>Add Genres</h3>
+              <form action='/genres/add' method="POST">
+                <div class="form-group">
+                  <label for="type">Type</label>
+                  <input type="text" class="form-control" id="type" name="type">
+                  <small class="form-text text-muted">Don't input existing genre</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+          </div>
+      </div>
+</div>
+
+  
+<%- include('partials/footer.ejs') %>
+   

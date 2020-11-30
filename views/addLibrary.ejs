@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+
+  <div class="container">
+      <div class="row">
+          <div class="col-6 mx-auto">
+              <h3>Add Libraries</h3>
+              <form action='/libraries/add' method="POST">
+                <div class="form-group">
+                  <label for="MovieId">Movie ID</label>
+                  <input type="number" class="form-control" id="MovieId" name="MovieId">
+                  <small class="form-text text-muted">Input Movie ID</small>
+                  <label for="GenreId">Genre ID</label>
+                  <input type="number" class="form-control" id="GenreId" name="GenreId">
+                  <small class="form-text text-muted">Input Genre ID</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+          </div>
+      </div>
+</div>
+
+  
+<%- include('partials/footer.ejs') %>
+   
